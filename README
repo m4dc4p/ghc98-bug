@@ -4,6 +4,7 @@ The file AAAX.hs will take longer and longer to compile as you uncomment fields 
 
 Timings below captured on Mac M2 w/ MacOS 14.2.1 (Sonoma)
 
+## GHC 9.8
 * 1 field
 
 ```
@@ -52,6 +53,7 @@ Timings below captured on Mac M2 w/ MacOS 14.2.1 (Sonoma)
 
 * 3 fields
 
+```
        26.75 real        24.71 user         0.64 sys
           4637196288  maximum resident set size
                    0  average shared memory size
@@ -70,3 +72,98 @@ Timings below captured on Mac M2 w/ MacOS 14.2.1 (Sonoma)
           9841577386  instructions retired
           2636315677  cycles elapsed
            169051584  peak memory footprint
+```
+
+## GHC 9.6
+
+* 1 field
+
+```
+        2.69 real         1.82 user         0.45 sys
+           201392128  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              182809  page reclaims
+                   9  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                  10  signals received
+                 130  voluntary context switches
+                2174  involuntary context switches
+          8946246041  instructions retired
+          2487480907  cycles elapsed
+           172656064  peak memory footprint
+```
+
+* 2 fields
+
+```
+        2.77 real         1.86 user         0.47 sys
+           196116480  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              182679  page reclaims
+                   9  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   4  signals received
+                 131  voluntary context switches
+                2407  involuntary context switches
+          8834557551  instructions retired
+          2463125862  cycles elapsed
+           167380416  peak memory footprint
+```
+
+* 3 fields
+
+```
+        2.77 real         1.88 user         0.44 sys
+           201113600  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              182326  page reclaims
+                   9  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                  10  signals received
+                 124  voluntary context switches
+                2349  involuntary context switches
+          8947906381  instructions retired
+          2506402265  cycles elapsed
+           172361088  peak memory footprint
+```
+
+* 10 fields
+
+```
+        3.04 real         2.13 user         0.45 sys
+           246398976  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              186636  page reclaims
+                   9  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                  15  signals received
+                 119  voluntary context switches
+                2427  involuntary context switches
+          9351551465  instructions retired
+          2749329243  cycles elapsed
+           217679360  peak memory footprint
+```
