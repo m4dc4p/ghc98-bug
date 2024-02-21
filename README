@@ -1,0 +1,72 @@
+This repo demonstrates pathological compilation behavior with GHC 9.8 & some higher-kinded types.
+
+The file AAAX.hs will take longer and longer to compile as you uncomment fields on the HDKType record.
+
+Timings below captured on Mac M2 w/ MacOS 14.2.1 (Sonoma)
+
+* 1 field
+
+```
+        2.45 real         1.76 user         0.32 sys
+           198443008  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              123197  page reclaims
+                 861  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   2  messages sent
+                   0  messages received
+                   0  signals received
+                  38  voluntary context switches
+                3116  involuntary context switches
+          9814386648  instructions retired
+          2612313406  cycles elapsed
+           168805760  peak memory footprint
+```
+
+* 2 fields
+
+```
+	6.92s real		6.10s user		0.39s sys
+          1067794432  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              179793  page reclaims
+                 861  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   2  messages sent
+                   0  messages received
+                   0  signals received
+                  44  voluntary context switches
+                3706  involuntary context switches
+          9838375536  instructions retired
+          2550883719  cycles elapsed
+           169166208  peak memory footprint
+```
+
+* 3 fields
+
+       26.75 real        24.71 user         0.64 sys
+          4637196288  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+              397622  page reclaims
+                 861  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   2  messages sent
+                   0  messages received
+                   0  signals received
+                  75  voluntary context switches
+                5274  involuntary context switches
+          9841577386  instructions retired
+          2636315677  cycles elapsed
+           169051584  peak memory footprint

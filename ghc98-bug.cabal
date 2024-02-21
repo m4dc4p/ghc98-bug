@@ -1,0 +1,22 @@
+cabal-version:      3.6
+name:               ghc98-bug
+version:            0.0.0
+
+build-type:         Simple
+
+common common
+
+  default-language:   GHC2021
+
+  default-extensions:
+    UndecidableInstances
+
+  build-depends:
+    , barbies
+    , base
+
+library
+  import:          common
+  exposed-modules: GHC98.AAAX
+  hs-source-dirs: src
+
